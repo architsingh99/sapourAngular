@@ -32,7 +32,7 @@ class QuestionController @Inject()(cc: MessagesControllerComponents, questionMan
       cachedUser =>
         implicit request =>
           questionManager.getQuestionsByCategoryId(categoryId).map { result =>
-            Ok(Json.obj("questions" -> result))
+            Ok(Json.obj("data" -> result))
           }.recover {
             case e: Exception =>
               logger.error("[QuestionController] Error in getQuestionsByCategory  " + e.getMessage + e.printStackTrace())

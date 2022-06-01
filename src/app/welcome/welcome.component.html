@@ -1,0 +1,20 @@
+<div class="container bg-light py-5">
+<h1 class="display-5 fw-bold">Welcome to Online Exam</h1>
+<p class="col-md-8 fs-4">This quiz will contain total 9 questions. Each Question holds 10 points.</p>
+<h4>Rules</h4>
+<ol>
+    <li>Correct Question gives you 10 points</li>
+    <li>Incorrect Question gives you -10 points</li>
+    <li>You will have 60 sec to answer each question</li>
+    <li>Refreshing the page will reset the Quiz</li>
+</ol>
+<h1 style="font-family: cursive; text-align: center">All the Best!!</h1>
+<div class="name col-md-4 my-3">
+<label for="">Select Category</label>
+<select #category class="form-control">
+    <option *ngFor="let item of categories" value="{{item.id}}">{{item.category}}</option>
+</select>
+</div>
+<button class="btn btn-primary btn-lg" routerLink="/question" routerLinkActive="router-link-active" (click)="startTest()">Start the exam</button>
+    </div>
+
